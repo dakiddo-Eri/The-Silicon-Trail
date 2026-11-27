@@ -8,10 +8,11 @@ sanity = 100  #percentage
 hardware_hp = 100  #percentage
 running = True
 inventory = []
+pace = []
 
 
 def win_game():
-    print("winner winner chiken dinner, ya save the world in a very hard game yay!")
+    print("winner winner chiken dinner, ya save the world in a very tottaly hard game yay!")
     sys.exit()
 
 def end_game():
@@ -22,19 +23,15 @@ def check_stats():
     global miles
     global inventory
     miles -= 20
+    if miles < 0:
+        miles = 5
     print(str(miles) + " miles left")
     print("$" + str(cash))
     print("%" + str(sanity) + " sanity")
     print("%" + str(hardware_hp) + " hardware hp")
     print("Inventory:")
     print(inventory)
-    if miles <= 0:
-        print("you stick in that stick o ram, and you save the health datacenters")
-        time.sleep(2)
-        print("ya manage to beat a very hard game, look at you!!")
-        time.sleep(2)
-        win_game()
-    elif hardware_hp <= 0:
+    if hardware_hp <= 0:
         print("yo car broke down and you get shot by ChatGPT")
         end_game()
     elif sanity <= 0:
@@ -84,6 +81,7 @@ print("Here are your stats")
 time.sleep(1)
 miles += 20
 check_stats()#break 1
+time.sleep(4)
 print("here, want some contraband?? ")
 time.sleep(1)
 print("""
@@ -343,7 +341,7 @@ while True:
     elif s1 == "2":
         print("you attempt to pour your morning coffee on the dashboard...")
         time.sleep(1.5)
-        print("your car blows up and you get ranover my a flying wheel")
+        print("your car blows up and you get ran over by a flying wheel")
         end_game()
     elif s1 == "3":
         print("you overclock your car's fans")
@@ -431,9 +429,199 @@ while True:
 time.sleep(4)
 check_stats()
 time.sleep(5)
-print("Its pretty boring the next 600 miles...")
-miles = 25
+
+print("here comes the long stretch, here pick an item of your choice")
 time.sleep(2)
+print("""
+[1] White Monster
+[2] Poppy's Skibidi Car Lotion
+[3] Weird Looking Rock
+[4] Thigh-High Socks
+[5] Kawaii Glock
+[6] Anime Figure
+[7] Car Buff (instant)
+[8] Sanity Buff (instant)
+[9] +1 Cash (instant)
+""")
+print("(instant) means it will be applied RIGHT NOW!!")
+print("enter a number, eg. 1, 2, 3...")
+
+while True:
+    s1 = input(">")
+    if s1 == "1":
+        inventory.append("White_Monster")
+        print("Added `White Monster` to inventory, yay!")
+        break
+    elif s1 == "2":
+        inventory.append("Poppy's_Skibidi_Car_Lotion")
+        print("Added `Poppy's Skibidi Car lotion` to inventory, yay!")
+        break
+    elif s1 == "3":
+        inventory.append("Weird_Looking_Rock")
+        print("Added `Weird Looking Rock` to inventory, yay! ")
+        break
+    elif s1 == "4":
+        inventory.append("Thigh_High_Socks")
+        print("Added `Thigh High Socks` to inventory, yay!")
+        break
+    elif s1 == "5":
+        inventory.append("Kawaii_Glock")
+        print("Added `Kawaii Glock` to inventory, yay!")
+        break
+    elif s1 == "6":
+        inventory.append("Anime_Figure")
+        print("Added `Anime Figure` to inventory, yay!")
+        break
+    elif s1 == "7":
+        hardware_hp += 20
+        print("added %20 health to car!!")
+        break
+    elif s1 == "8":
+        sanity += 20
+        print("added %20 sanity to YOU!!")
+        break
+    elif s1 == "9":
+        cash += 1
+        print("added $1 to your ballance, you might want to check your brain again...")
+        break
+    else:
+        print("invalid input, try again")
+time.sleep(2)
+print("now, choose your pace...")
+time.sleep(1)
+print("""
+[1] Normal, keep your current pace
+[2] Floor it the rest of the way
+[3] Slowwww, prob torture for YOU
+[4] Risk it, you can either get instant fast, or kaboom
+""")
+
+while True:
+    s1 = input(">")
+    if s1 == "1":
+        pace = "normal"
+        break
+    elif s1 == "2":
+        pace = "floor_it"
+        break
+    elif s1 == "3":
+        pace = "slow"
+        break
+    elif s1 == "4":
+        outcome = random.choice (["good", "bad", "bad"])
+        if outcome == "good":
+            cash += 40
+            miles -= 40
+            sanity += 15
+            pace = "normal"
+            print("you get $40, you run an extra 40 miles, and increase yo sanity by %15")
+            break
+        elif outcome == "bad":
+            cash -= 40
+            miles += 40
+            sanity -= 15
+            pace = "normal"
+            print("you lose $40, you backtrack 40 miles, and you lose %15 sanity")    
+            break
+    else:
+        print("invalid input, try again boii")
+
+while miles > 25:
+    if pace == "normal":
+        miles -= 100
+        print("Cruising steadily down I-80...")
+    elif pace == "floor_it":
+        miles -= 180
+        hardware_hp -= 15
+        sanity -= 10
+        print("Redlining the Civic at 130 MPH! The engine is screaming...")
+    elif pace == "slow":
+        miles -= 40
+        sanity -= 20
+        print("Driving 35 MPH in the slow lane... everyone is honking at you...")
+        time.sleep(3)     
+    check_stats()
+    time.sleep(2)
+    if miles <= 25:
+        break
+    event = random.choice(["rock_event", "sock_event", "drone_trap"])
+
+    if event == "rock_event":
+        print("A rogue Boston Dynamics robodog jumps onto your hood!")
+        print("""
+[1] Throw 'Weird Looking Rock' at it
+[2] Swerve violently
+        """)
+        while True:
+            choice = input(">")
+            if choice == "1":
+                if "Weird_Looking_Rock" in inventory:
+                    inventory.remove("Weird_Looking_Rock")
+                    cash += 60
+                    print("BONK! Direct hit. You aquire $60 worth of scrap from it")
+                    break
+                else:
+                    print("ya no have that in inventory, try again...")
+            elif choice == "2":
+                hardware_hp -= 20
+                print("You shake it off, but scrape the guardrail, ya drop 20 hardware hp")
+                break
+            else:
+                print("invalid input, try again boii")
+    elif event == "sock_event":
+        print("Your Civic's onboard demands a firmware update in Rust!")
+        print("""
+[1] Equip 'Thigh High Socks' for +999 coding aura
+[2] Smash the dashboard screen
+""")    
+        while True:
+            choice = input(">")
+            if choice == "1":
+                if "Thigh_High_Socks" in inventory:
+                    sanity += 25
+                    miles -= 60
+                    print("Instant 10x dev powers, you optimized the engine,")
+                    break
+                else:
+                    print("ya dont have that in y o inventory, try again")
+            elif choice == "2":
+                hardware_hp -= 25
+                sanity -= 15
+                print("screen shattered, now you're driving without your gas meter")
+                break
+            else:
+                print("invalid input, try again boii")
+
+    elif event == "drone_trap":
+        print("An Amazon delivery drone hovers in front of you windshield, demanding a tip")
+        time.sleep(2)
+        print("""
+[1] Tip it 200
+[2] Flash the 'Kawaii Glock'
+[3] Ignore it
+""")
+        while True:
+            choice = input(">")
+            if choice == "1":
+                cash -= 200
+                print("It drops a complimentary air freshener and flies away")
+                break
+            elif choice == "2":
+                if "Kawaii_Glock" in inventory:
+                    cash += 50
+                    sanity += 15
+                    print("The drone panics, drops its package ($50) and flees")
+                    break
+                else:
+                    print("No Kwaii Glock in inventory, pick again boii")
+            elif choice == "3":
+                hardware_hp -= 15
+                print("It drops a brick on your hood out of spite, yo car takes damage")
+                break
+            else:
+                print("invalid input, try again boii")
+
+miles = 25
 check_stats()
 print("You are approaching the datacenter, all your hardwork is about" \
 " to be paid off, an agent with your beautiful early access RTX 6060" \
@@ -463,7 +651,7 @@ while True:
         " restored...")
         time.sleep(4)
         print("Look at that! You're on the national news and you got a" \
-        "RTX 6060 while you're at it!")
+        " RTX 6060 while you're at it!")
         win_game()
     else:
         print("invalid input, try again boii...")
