@@ -34,24 +34,38 @@ def check_stats():
     print("Inventory:")
     print(inventory)
     if hardware_hp <= 0:
-        print("yo car broke down and you get shot by ChatGPT")
+        print("yo car broke down and you get shot by a flying rock being controlled by ChatGPT with a 'Not Kawaii Glock'")
         end_game()
     elif sanity <= 0:
-        print("you go crazy and you die in a hole")
+        print("you go crazy and you die in a hole with stick that you call friend for passing the Roblox age verification as 99+")
         end_game()
     elif cash <= 0:
-        print("you go broke and you cant buy gas, you die from ligma")
+        print("you go broke and you cant buy gas, you die from a sigma mewing gas station guy")
         end_game()
     else:
         print("onwards you go!!")
 
-print("The Silicon Trail")
+print(r"""
+▄▄▄▄▄▄▄▄▄ ▄▄▄   ▄▄▄ ▄▄▄▄▄▄       ▄▄▄▄▄▄▄▄ ▄▄▄ ▄▄▄    ▄▄▄  ▄▄▄▄▄▄  ▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄       ▄▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄   ▄▄▄▄▄▄▄  ▄▄▄ ▄▄▄   
+█▄▄▄ ▄▄▄█ █ █   █ █ █ ▄▄▄█      █ ▄▄▄▄▄ █ █ █ █ █    █ █ █ ▄▄▄▄█ █ ▄▄▄▄▄ █ █ ▄▄▄▄▄ █      █▄▄▄ ▄▄▄█ █ ▄▄▄▄▄ █ █ ▄▄▄▄▄ █ █ █ █ █   
+   █ █    █ █   █ █ █ █         █ █   █ █ █ █ █ █    █ █ █ █     █ █   █ █ █ █   █ █         █ █    █ █   █ █ █ █   █ █ █ █ █ █   
+   ▓░▓    ▓░▓   ▓░▓ ▓░▓         ▓░▓   ▓░▓ ▓░▓ ▓░▓    ▓░▓ ▓░▓     ▓░▓   ▓░▓ ▓░▓   ▓░▓         ▓░▓    ▓░▓   ▓░▓ ▓░▓   ▓░▓ ▓░▓ ▓░▓   
+   ▒▒▒    ▒▒▒   ▒▒▒ ▒▒▒         ▒▒▒   ▀▀▀ ▒▒▒ ▒▒▒    ▒▒▒ ▒▒▒     ▒▒▒   ▒▒▒ ▒▒▒   ▒▒▒         ▒▒▒    ▒▒▒   ▒▒▒ ▒▒▒   ▒▒▒ ▒▒▒ ▒▒▒   
+   ░▓░    ░▓░   ░▓░ ░▓▄▄▄░      ░▓░▄▄▄▄▄  ░▓░ ░▓░    ░▓░ ░▓░     ░▓░   ░▓░ ░▓░   ░▓░         ░▓░    ░▓▄▄▄▄▄▓░ ░▓░   ░▓░ ░▓░ ░▓░   
+          ███   █ █    ▀▀▀      ▀▄▄▄▄▄▄██                          █                                  █▀▀▀▀▄▄                     
+   ░░░    ░░▄▄▄▄▄░░ ░░░         ▄▄▄   ░░░ ░░░ ░░░    ░░░ ░░░     ░░░   ░░░ ░░░   ░░░         ░░░    ░░█   █░█ ░░▄▄▄▄▄░░ ░░░ ░░░   
+   ▒▒▒    ▒▒▒▀▀▀▒▒▒ ▒▒▒         ▒▒▒   ▒▒▒ ▒▒▒ ▒▒▒    ▒▒▒ ▒▒▒     ▒▒▒   ▒▒▒ ▒▒▒   ▒▒▒         ▒▒▒    ▒▒█   █▒█ ▒▒▒▀▀▀▒▒▒ ▒▒▒ ▒▒▒   
+   ▓▓▓    ▓▓▓   ▓▓▓ ▓▓▓         ▓▓▓   ▓▓▓ ▓▓▓ ▓▓▓    ▓▓▓ ▓▓▓     ▓▓▓   ▓▓▓ ▓▓▓   ▓▓▓         ▓▓▓    ▓▓█   █▓█ ▓▓▓   ▓▓▓ ▓▓▓ ▓▓▓   
+   ███    ███   ███ ██▄▄▄█      ██▄▄▄▄▄██ ███ ██▄▄▄█ ███ ██▄▄▄▄█ ██▄▄▄▄▄██ ███   ███         ███    ███   ███ ███   ███ ███ ██▄▄▄█
+   ▀▀▀    ▀▀▀   ▀▀▀ ▀▀▀▀▀▀      ▀▀▀▀▀▀▀▀  ▀▀▀ ▀▀▀▀▀▀ ▀▀▀  ▀▀▀▀▀▀  ▀▀▀▀▀▀▀  ▀▀▀   ▀▀▀         ▀▀▀    ▀▀▀   ▀▀▀ ▀▀▀   ▀▀▀ ▀▀▀ ▀▀▀▀▀▀
+""")
 time.sleep(0.4)
 print("Start?   y / n")
 start = input(">")
 
 if start == "n":
     print("exiting...")
+    time.sleep(1)
     sys.exit()
 
 else:
@@ -546,7 +560,7 @@ while miles > 25:
     time.sleep(2)
     if miles <= 25:
         break
-    event = random.choice(["rock_event", "sock_event", "drone_trap"])
+    event = random.choice(["rock_event", "sock_event", "drone_trap", "firewall_hack"])#picker thingy
 
     if event == "rock_event":
         print("A rogue Boston Dynamics robodog jumps onto your hood!")
@@ -585,7 +599,7 @@ while miles > 25:
                     print("Instant 10x dev powers, you optimized the engine,")
                     break
                 else:
-                    print("ya dont have that in y o inventory, try again")
+                    print("ya dont have that in yo inventory, try again")
             elif choice == "2":
                 hardware_hp -= 25
                 sanity -= 15
@@ -622,6 +636,37 @@ while miles > 25:
                 break
             else:
                 print("invalid input, try again boii")
+    elif event == "firewall_hack":
+        print("ALERT: Rogue AI firewall locking your Civic's brakes!")
+        time.sleep(2)
+        choice = random.choice(["1", "2", "3", "4"])
+        if choice == "1":
+            thingy = "bypass al"
+            print("Type 'bypass al' in under 5 seconds")
+        elif choice == "2":
+            thingy = "h!"
+            print("Type 'h!' in under 5 seconds")
+        elif choice == "3":
+            thingy = "im a guy im a dog hi im a dude"
+            print("Type 'im a guy im a dog hi im a dude' in under 5 seconds")
+        elif choice == "4":
+            thingy = "i love arch linux"
+            print("Type 'i love arch linux' in under 5 seconds")
+
+        start_time = time.time()
+        s1 = input(">").strip().lower()
+        elapsed = time.time() - start_time
+
+        if s1 == thingy and elapsed <= 5:
+            cash += 20
+            sanity += 5
+            print("wow, ur fast, or u just got the easy one... well heres some cash & sanity")
+        else:
+            cash -= 100
+            sanity -= 15
+            print("flash bang, haha, well, you lose some cash and some sanity")
+
+
 
 miles = 25
 check_stats()

@@ -32,7 +32,10 @@ yay its running now :3
 * **Watch your stats:** Buy secret contraband early, it can save your life later, trust
 * **Think twice before handing over the RAM.**
 
-##Built With
+## Notes
+* Because the `.exe` is unsigned, a warning thingy will pop up yea, if you think this is sketchy delete it if you want, but if you're confident, just say run anyways or if theres no button like that yea, download the source and run `main.py`.
+
+## Built With
 
 * **Python 3**
 * **PyInstaller** (for the cool .exe, yay!!)
