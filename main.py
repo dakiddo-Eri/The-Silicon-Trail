@@ -13,10 +13,12 @@ pace = []
 
 def win_game():
     print("winner winner chiken dinner, ya save the world in a very tottaly hard game yay!")
+    time.sleep(7)
     sys.exit()
 
 def end_game():
     print ("YA LOST, GAMEOVER, TRY AGAIN IF YA DARE")
+    time.sleep(7)
     sys.exit()
 
 def check_stats():
